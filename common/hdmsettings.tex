@@ -1,0 +1,72 @@
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[ngerman,english]{babel}
+\usepackage{avant} 
+\usepackage[a4paper, margin=3cm]{geometry}
+\usepackage{tikz}
+\usepackage{svg}
+\usetikzlibrary{calc,shapes.multipart,chains,arrows}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\definecolor{hdm}{HTML}{ac0228}
+\pagestyle{fancy}
+\renewcommand{\thispagestyle}[1]{} % no style change for title page
+\makeatletter
+\patchcmd{\headrule}{\hrule}{\color{hdm}\hrule}{}{}
+\patchcmd{\footrule}{\hrule}{\color{hdm}\hrule}{}{}
+\makeatother
+
+\renewcommand{\headrulewidth}{1.2pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\lhead{\includegraphics[height=1cm]{common/hdm-logo-gross.jpg}}
+\cfoot{\thepage}
+
+\usepackage{hyperref}
+\hypersetup{ colorlinks = true, linkcolor = black, urlcolor = hdm, citecolor = black }
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{0.7em}
+\usepackage[export]{adjustbox}
+\usepackage{MnSymbol}
+\usepackage{listingsutf8}
+\usepackage{courier}
+\lstset{inputencoding=utf8}
+\lstset{literate=%
+{Ö}{{\"O}}1
+{Ä}{{\"A}}1
+{Ü}{{\"U}}1
+{ß}{{\ss}}2
+{ü}{{\"u}}1
+{ä}{{\"a}}1
+{ö}{{\"o}}1
+}
+
+\lstset{
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  showstringspaces=false,
+}
+
+\lstdefinelanguage{JavaScript} {
+	morekeywords={
+		break,const,continue,delete,do,while,export,for,in,function,
+		if,else,import,in,instanceOf,label,let,new,return,switch,this,
+		throw,try,catch,typeof,var,void,with,yield
+	},
+	sensitive=false,
+	morecomment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	morestring=[b]",
+	morestring=[d]'
+}
+
+\lstdefinelanguage{CSS} {
+  morekeywords={color,background,margin,padding,font,weight,display,position,top,left,right,bottom,list,style,border,size,white,space,min,width},
+  sensitive=false,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]",
+}
+
+\lstset{
+  language=PHP,
+  morekeywords={as, strpos},
+}

@@ -1,0 +1,173 @@
+#footer {
+    bottom:0;
+    position:fixed;
+    z-index:150;
+    height:35px;
+    width:100%;
+    vertical-align:baseline;
+    font-size:11.4px;
+    color:white;
+    line-height:34px;
+    font-family: Verdana, Helvetica, sans-serif;
+    display:block;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 6.88415956497192px;
+    padding-top: 0px;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #b7052c), color-stop(0.5, #ac0228), color-stop(0.51, #be022d), color-stop(1, #db0031));
+    background-image: -moz-linear-gradient(center bottom, #b7052c 0%, #ac0228 50%, #be022d 51%, #db0031 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#db0031', endColorstr='#ac0228');
+    background-color: #db0031;
+}
+
+#header {
+    position:fixed;
+    top:0;
+    right:0;
+    background-image: url(hdm-logo.gif);
+    background-repeat:no-repeat;
+    background-position: center center;
+    width:175px;
+    height:66px;
+}
+
+div>section:first-of-type h1 {
+    font-size:2em;
+}
+
+b {
+    color:#ac0228;
+}
+
+.reveal section img {
+    border-width: 0px;
+    box-shadow: 0 0 0;
+    text-align:center;
+}
+
+section[data-centered] h1, section[data-centered] h2,section[data-centered] h3,section[data-centered] h4 {
+    margin-top: 30% !important;
+    text-align: center !important;
+}
+
+section[data-centered] p {
+    text-align: center !important;
+}
+
+section[data-centered] {
+    text-align: center !important;
+}
+
+section[data-smalltable18] table {
+    font-size: 18pt;
+}
+
+section[data-right-margin] ul, section[data-right-margin] p, section[data-right-margin] ol {
+    padding-right:100px !important;
+}
+
+section[data-smallprint] {
+    font-size:16pt;
+}
+
+.reveal p {
+    text-align:left;
+}
+
+.slides {
+    margin-bottom: 35px!;
+    margin-top:35px!;
+}
+
+.slides section {
+    height:700px;
+    text-align:center;
+}
+
+.right-1 {
+    position:absolute;
+    right:-40px;
+    top:40px;
+    z-index:-5;
+    width:150px;
+    height:auto;
+}
+
+.reveal section img.right-float {
+    float:right;
+    width:150px;
+    margin-left:20px;
+}
+
+.bottom-center {
+    position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    bottom:200px;
+    width:auto;
+    height:200px;
+}
+
+.top-center {
+    position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    top:100px;
+    width:auto;
+    height:200px;
+}
+
+.center {
+    margin: auto !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.reveal section img.shadow {
+    box-shadow: 10px 10px 12px -8px rgba(0,0,0,0.75);
+    border-width:1px;
+    border-style:solid;
+}
+
+section *  {
+    text-align: left;
+}
+
+section h1,h2,h3,h4,h5,table,img {
+    text-align:center;
+}
+
+.reveal ol, .reveal dl, .reveal ul {
+    display:block;
+}
+
+ol.org-ol li {
+    margin-left:40px;
+}
+
+.reveal section li img {
+    height: 1em;
+    margin:0px;
+    border:0px;
+    padding:0px;
+}
+
+div.figure p:nth-child(2) {
+    display:none;
+}
+
+.reveal pre code {
+    max-height:800px;
+    font-size:16px;
+    background: #FFFFFF none repeat scroll 0% 0%;
+}

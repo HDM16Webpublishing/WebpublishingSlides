@@ -1,0 +1,2176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Webpublishing</title>
+   <meta name="author" content="(Dr. Benjamin Zapilko)"/>
+<meta name="author" content="(Prof. Dr. Kai Eckert)"/>
+
+<link rel="stylesheet" href="common/reveal.js-3.0.0/css/reveal.css"/>
+<link rel="stylesheet" href="common/reveal.js-3.0.0/css/theme/white.css" id="theme"/>
+<link rel="stylesheet" href="common/hdm-style.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'common/reveal.js-3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<style type="text/css">div>section:first-of-type {background-image:url(./blueweb.jpg); background-repeat:no-repeat; background-size:contain; height:1700px;} div>section:first-of-type h1, div>section:first-of-type h2 {border-top:80px; color:  #db0031; text-shadow: 2px 2px 10px #ffffff;}</style><link rel="stylesheet" type="text/css" href="common/reveal.js-3.0.0/lib/css/default.css" />
+</head>
+<body>
+<div id="header"></div>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide">
+<h1>Webpublishing</h1>
+<h2>Dr. Benjamin Zapilko</h2>
+<h2><a href="mailto:"></a></h2>
+<h2></h2>
+</section>
+<section id="table-of-contents">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-sec-1">Einleitung</a></li>
+<li><a href="#/slide-sec-2">Werkzeuge und Dokumentation</a></li>
+<li><a href="#/slide-sec-3">HTML Grundlagen</a></li>
+<li><a href="#/slide-sec-4">Aufbau einer Website</a></li>
+<li><a href="#/slide-sec-5">Praxisprojekt: Eine eigene Website</a></li>
+<li><a href="#/slide-sec-6">CSS</a></li>
+<li><a href="#/slide-sec-7">Serverseitige Programmierung</a></li>
+<li><a href="#/slide-sec-8">Content Management Systeme</a></li>
+<li><a href="#/slide-sec-9">JavaScript</a></li>
+<li><a href="#/slide-sec-10">Referenzen und Lizenz</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+
+
+<section>
+<section id="slide-sec-1" data-centered>
+<h2 id="sec-1">Einleitung</h2>
+</section>
+</section>
+<section>
+<section id="slide-sec-1-1">
+<h3 id="sec-1-1">Diskussion</h3>
+<ul>
+<li>Wie gut kennen Sie das Web?</li>
+<li>Was ist das Web?</li>
+<li>Wie funktioniert das Web?</li>
+<li>Was könnte man in Webpublishing so alles lernen?</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-1-2">
+<h3 id="sec-1-2">Inhalte und Konzept</h3>
+<ul>
+<li>Webpublishing als Grundlage der Webtechnologie.</li>
+<li>Inhalte weitgehend offen und auf praktische Übung fokussiert.</li>
+<li>Überblick über technische Grundlagen des Web sowie serverseitige Programmierung und Content Management Systeme</li>
+<li>Praktischer Umgang mit Werkzeugen zur Erstellung von Websites</li>
+<li>Hoher Anteil an eigenverantwortlichem Lernen und Üben.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-1-3">
+<h3 id="sec-1-3">Codecademy</h3>
+<ul>
+<li>Registrieren Sie sich auf Codecademy: <a href="https://www.codecademy.com">https://www.codecademy.com</a></li>
+<li>Verschiedene Online-Kurse zum selbständigen Lernen.</li>
+<li>Diese Veranstaltung integriert den Kurs <a href="https://www.codecademy.com/en/tracks/web">HTML &amp; CSS</a>.</li>
+<li>Teilweise auch relevant, bzw. zur Vertiefung: <a href="https://www.codecademy.com/en/tracks/javascript">JavaScript</a>, <a href="https://www.codecademy.com/en/tracks/jquery">jQuery</a>, <a href="https://www.codecademy.com/en/tracks/php">PHP</a></li>
+<li>Auf konkrete Einzelmodule wird in diesem Skript eingegangen.</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-1-4">
+<h3 id="sec-1-4">Formales</h3>
+<div class="outline-text-3" id="text-1-4">
+</div></section>
+<section id="slide-sec-1-4-1">
+<h4 id="sec-1-4-1">Prüfung</h4>
+<ul>
+<li>Prüfung als Projektarbeit (Gruppen bis 3 möglich)</li>
+<li>Thema der Projektarbeit weitgehend frei, z.B.:
+<ul>
+<li>Prototypische Umsetzung einer Website</li>
+<li>Implementierung einer Zeitschrift in Wordpress</li>
+<li>Entwicklung einer Webanwendung</li>
+<li>&#x2026;</li>
+
+</ul></li>
+<li>Ihr Thema wählen Sie zur Mitte des Semesters.</li>
+<li>Abgabe und Präsentation: 23. Januar 2017 (letzter Termin)</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-1-4-2">
+<h4 id="sec-1-4-2">Abgabe</h4>
+<p>
+Bestehend aus:
+</p>
+<ul>
+<li>Ihrem Projekt,</li>
+<li>Ihrer Ausarbeitung und</li>
+<li>ggf. der Präsentation.</li>
+
+</ul>
+
+<p>
+Abgabe über Moodle in <b>einem</b> ZIP-File.
+</p>
+
+
+</section>
+<section id="slide-sec-1-4-3">
+<h4 id="sec-1-4-3">Struktur des ZIP-Files</h4>
+<p>
+vorname-nachname.zip:
+</p>
+
+<ul>
+<li><b>/vorname-nachname</b>
+<ul>
+<li><b>vorname-nachname-ausarbeitung.pdf</b>  &larr; Ihre Ausarbeitung</li>
+<li><b>vorname-nachname-folien.pdf</b>  &larr; Ihre Präsentation</li>
+<li><b>/htdocs</b>      &larr; Ihr Projekt</li>
+<li><b>/database</b>    &larr; Datenbankexport</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-sec-1-4-4">
+<h4 id="sec-1-4-4">Ausarbeitung</h4>
+<ul>
+<li>Dokumentation Ihres Projekts.</li>
+<li>Kurz fassen, eventuell reichen 3-5 Seiten. Viel mehr als 10 Seiten (ohne Bilder) sollten es auf keinen Fall sein.</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-1-4-5">
+<h4 id="sec-1-4-5">Typische Struktur der Ausarbeitung</h4>
+<ul>
+<li>Kurzbeschreibung Ihres Projekts.</li>
+<li>Beschreibung der Abgabe:
+<ul>
+<li>Was muss wo hin? (Insbesondere, wenn es vom Standard abweicht)</li>
+<li>Welche Datenbanken braucht das Programm, was muss alles laufen?</li>
+<li>Welche Ordner enthalten was, wie haben Sie Ihr Projekt auf Dateiebene organisiert.</li>
+
+</ul></li>
+<li>Beschreibung der Website (Screenshots), bzw. bei größeren Projekten der wichtigsten Teile.</li>
+<li>Ausblick und mögliche Erweiterungen.</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-1-4-6">
+<h4 id="sec-1-4-6">Präsentation</h4>
+<ul>
+<li>10 Minuten(!), die Zeit ist strikt einzuhalten.</li>
+<li>Folien sind als PDF abzugeben.</li>
+<li>Es kann gerne auch ohne Folien nur das Projekt präsentiert werden oder eine Mischung aus beidem.</li>
+<li>Präsentation auf eigenem oder Studiengangslaptop, vorher Anschluss an den Projektor testen und alles vorbereiten!</li>
+<li>Inhalt: Ihr Projekt. Sie können Schwerpunkte setzen: was ist am interessantesten, was war am schwersten, &#x2026;</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-1-4-7">
+<h4 id="sec-1-4-7">Ihr Projekt</h4>
+<ul>
+<li>Enthält ihren Hauptordner mit allen Unterordnern, so dass das Projekt in XAMPP läuft, wenn es unterhalb von htdocs kopiert wird.</li>
+<li>Bei Wordpress oder Dokuwiki kann der Ordner eventuell woanders sein, z.B. unter xampp/apps/wordpress/htdocs</li>
+<li>Läuft ihr Projekt in einem Unterordner von htdocs, dann brauchen Sie nur diesen Ordner im Zip-File unter htdocs abzulegen.</li>
+<li>Generell bitte nur Dateien und Ordner abgeben, die etwas mit Ihrem Projekt zu tun haben.</li>
+<li>PHP-Code oder ggf. auch HTML-Code bitte gut kommentieren, damit verständlich wird, was Sie da gemacht haben.</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-1-4-8">
+<h4 id="sec-1-4-8">Datenbankexport</h4>
+
+<div class="figure">
+<p><img src="bilder/export-database.png" alt="export-database.png" style="width:50%;" />
+</p>
+</div>
+
+<ul>
+<li>phpMyAdmin &rarr; Export &rarr; Ok &rarr; Datei abspeichern.</li>
+<li>Textdatei (mit der Endung .sql), die alle SQL-Anweisungen enthält, um die Datenbank neu aufzusetzen.</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-1-4-9">
+<h4 id="sec-1-4-9">Statischer Abzug</h4>
+<p>
+Siehe Abschnitt <a href="#sec:static-generation">Zurück zur statischen Website</a>.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-1-5" data-centered>
+<h3 id="sec-1-5">Termine</h3>
+</section>
+<section id="slide-sec-1-5-1" data-smalltable18>
+<h4 id="sec-1-5-1">Übersicht</h4>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<!--<tr>
+<td class="right">&#xa0;</td>
+<td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2015-10-12 Mo]</span></span></td>
+<td class="left">Ausfall</td>
+</tr>-->
+<tr>
+<td class="right">1</td>
+<td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2015-10-10 Mo]</span></span></td>
+<td class="left">Einführung, HTML Grundlagen</td>
+</tr>
+
+<tr>
+<td class="right">2</td>
+<td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2015-10-17 Mo]</span></span></td>
+<td class="left">Aufbau einer Website</td>
+</tr>
+
+<tr>
+<td class="right">3</td>
+<td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2015-10-24 Mo]</span></span></td>
+<td class="left">Praxisprojekt: Eine eigene Website</td>
+</tr>
+
+<tr>
+   <td class="right">&#xa0;</td>
+<td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2015-10-31 Mo]</span></span></td>
+<td class="left">Ausfall</td>
+</tr> 
+
+   <tr>
+      <td class="right">4</td>
+      <td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2015-11-07 Mo]</span></span></td>
+      <td class="left">CSS</td>
+   </tr>
+
+<tr>
+<td class="right">5</td>
+<td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2015-11-14 Mo]</span></span></td>
+<td class="left">Serverseitige Programmierung</td>
+</tr>
+
+<tr>
+<td class="right">6</td>
+<td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2015-11-21 Mo]</span></span></td>
+<td class="left">Zwischenpräsentationen, Fragestunde</td>
+</tr>
+
+   <tr>
+      <td class="right">&#xa0;</td>
+      <td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2015-11-28 Mo]</span></span></td>
+      <td class="left">Ausfall</td>
+   </tr>
+
+   <tr>
+      <td class="right">7</td>
+      <td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2015-12-05 Mo]</span></span></td>
+      <td class="left">GitHub, Content Management Systeme</td>
+   </tr>
+
+<tr>
+<td class="right">8</td>
+<td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2015-12-12 Mo]</span></span></td>
+   <td class="left">Content Management Systeme</td>
+</tr>
+
+<tr>
+<td class="right">9</td>
+<td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2015-12-19 Mo]</span></span></td>
+   <td class="left">Datenbankabfragen in PHP</td>
+</tr>
+
+<!--   <tr>
+      <td class="right">10</td>
+      <td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2015-12-19 Mo]</span></span></td>
+      <td class="left">Freies Arbeiten, Fragestunde</td>
+   </tr> -->
+
+<tr>
+<td class="right">10</td>
+<td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2017-01-09 Mo]</span></span></td>
+<td class="left">Freies Arbeiten</td>
+</tr>
+
+<tr>
+<td class="right">11</td>
+<td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2017-01-16 Mo]</span></span></td>
+<td class="left">Freies Arbeiten</td>
+</tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left"><span class="timestamp-wrapper"><span class="timestamp">[2017-01-23 Mo]</span></span></td>
+<td class="left">Präsentationen</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section>
+<section id="slide-sec-1-6">
+<h3 id="sec-1-6">Skript</h3>
+<p>
+Dieses Skript wird ständig aktualisiert und ist hier abrufbar:
+</p>
+
+<p>
+<a href="http://www.wisslab.org">http://www.wisslab.org</a> -&gt; Teaching
+</p>
+
+<p>
+Bitte möglichst nicht ausdrucken, bzw. erst am Ende der Veranstaltung.
+</p>
+
+</section>
+<section id="slide-sec-1-6-1">
+<h4 id="sec-1-6-1">Zeichenerklärung</h4>
+<ul>
+<li>&crarr; - Damit sind Zeilenumbrüche gekennzeichnet, die in Wirklichkeit <b>nicht</b> existieren, sondern nur wegen des begrenzten Platzes im Skript oder auf den Folien eingefügt werden mussten. Als Beispiel bei der angabe einer URL:
+
+<p>
+<a href="http://www.hdm-stuttgart.de/~eckert/dasisteinsehrlangerverzeichnisname"><a href="http://www.hdm-stuttgart.de/~eckert/dasisteinsehrlanger">http://www.hdm-stuttgart.de/~eckert/dasisteinsehrlanger</a></a> &crarr;<br  />
+  <a href="http://www.hdm-stuttgart.de/~eckert/dasisteinsehrlangerverzeichnisname">verzeichnisname</a>
+</p></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-2" data-centered>
+<h2 id="sec-2">Werkzeuge und Dokumentation</h2>
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-2-1">
+<h3 id="sec-2-1">Werkzeuge</h3>
+<div class="outline-text-3" id="text-2-1">
+</div></section>
+<section id="slide-sec:windows-ordner">
+<h4 id="sec:windows-ordner"><a id="sec-2-1-1" name="sec-2-1-1"></a>Windows Einstellungen</h4>
+
+
+<div class="figure">
+<p><img src="bilder/ordneroptionen.png" alt="ordneroptionen.png" style="float:right;margin-left:10px;" />
+</p>
+</div>
+
+<ul>
+<li>Win 8/10: Explorer-Optionen (Systemsteuerung -&gt; Darstellung)</li>
+<li>Win 7: Ordneroptionen (Systemsteuerung)</li>
+<li>Reiter: Ansicht</li>
+<li>"Erweiterung bei bekannten Dateitypen ausblenden" <b>ausschalten</b>.</li>
+
+</ul>
+
+
+</section>
+<section id="slide-sec-2-1-2">
+<h4 id="sec-2-1-2">Der Editor</h4>
+<p>
+Anforderungen: 
+</p>
+<ul>
+<li>Unterstützung für <a href="https://en.wikipedia.org/wiki/Newline#Common_problems">Windows und Unix Zeilenenden</a> - deswegen kommt der Winwdows Texteditor (Notepad) nicht in Frage.</li>
+<li>Unterstützung für verschiedene <a href="https://en.wikipedia.org/wiki/Character_encoding">Zeichencodierungen</a>, vor allem <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a>.</li>
+<li>Unterstützung von Syntax Highlighting - hier für HTML, CSS und JavaScript.</li>
+
+</ul>
+
+<p>
+   Unter Windows empfohlen: <a href="https://notepad-plus-plus.org/">Notepad++</a>, <a href="https://de.emeditor.com/">EmEditor</a>
+</p>
+
+<p>
+Alternativen (auch für Mac): <a href="http://www.sublimetext.com/">Sublime Text</a>, <a href="http://atom.io">Atom</a>, <a href="https://www.gnu.org/software/emacs/">Emacs</a>, <a href="http://www.vim.org/">Vim</a>
+</p>
+
+</section>
+<section id="slide-sec-2-1-3">
+<h4 id="sec-2-1-3">Der Webbrowser</h4>
+<p>
+Empfohlen: <a href="https://www.mozilla.org/de/firefox/products/">Firefox</a> oder <a href="https://www.google.de/chrome/browser/desktop/">Chrome</a>.
+</p>
+</section>
+<section id="slide-sec-2-1-4">
+<h4 id="sec-2-1-4">Entwicklerwerkzeuge / Firebug</h4>
+
+<div class="figure">
+<p><img src="bilder/chrome-devtools.png" alt="chrome-devtools.png" />
+</p>
+</div>
+
+<ul>
+<li>Firefox Entwicklerwerkzeuge (Strg-Umschalt-I)</li>
+<li>Chrome Developer Tools (F12)</li>
+<li>Alternativ: Firebug (Erweiterung für Firefox)</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-2-1-5">
+<h4 id="sec-2-1-5">Codebeautify</h4>
+<p>
+<a href="http://codebeautify.org/htmlviewer">http://codebeautify.org/htmlviewer</a>
+</p>
+
+<ul>
+<li>Ein einfacher Online-Editor, um im Browser HTML zu erstellen.</li>
+<li>Ausgabe direkt neben dem Code (Run drücken)</li>
+<li>Einfache Beautify-Funktion zum automatischen Einrücken des HTML-Codes.</li>
+<li>Möglichkeit, erstellten Code mit anderen zu teilen.</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-2-1-6">
+<h4 id="sec-2-1-6">JSFiddle</h4>
+<p>
+<a href="https://jsfiddle.net/">https://jsfiddle.net/</a>
+</p>
+
+<ul>
+<li>Online-Editoren für HTML, CSS und JavaScript.</li>
+<li>Auch hier direkte Ausgabe im Browser.</li>
+<li>Noch bessere Funktionen zum Teilen und gemeinsamen Arbeiten.</li>
+<li>Direkte Einbindung beliebter Bibliotheken (z.B. jQuery).</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-2-2">
+<h3 id="sec-2-2">Dokumentation</h3>
+<div class="outline-text-3" id="text-2-2">
+</div></section>
+<section id="slide-sec-2-2-1">
+<h4 id="sec-2-2-1">HTML 5 Validator</h4>
+<p>
+<a href="https://html5.validator.nu/">https://html5.validator.nu/</a>
+</p>
+
+<ul>
+<li>Validiert HTML-Code anhand einer URL, einer hochgeladenen Datei oder aus einem Textfeld.</li>
+<li>Meldungen sind gerade für Anfänger nicht immer leicht zu verstehen.</li>
+<li>Aber mit zunehmender Erfahrung leichter zu nutzen und unverzichtbar als Test für die eigene Seite.</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-2-2-2">
+<h4 id="sec-2-2-2">SelfHTML</h4>
+<p>
+<a href="http://wiki.selfhtml.org/">http://wiki.selfhtml.org/</a>
+</p>
+
+<ul>
+<li>Umfangreiche deutschsprachige HTML-, CSS- und JavaScript-Referenz.</li>
+<li>Möglichkeit, die Beispiele direkt zu bearbeiten ("Frickln").</li>
+<li>Gute Tutorials.</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-2-2-3">
+<h4 id="sec-2-2-3">HTML 5 Spezifikation</h4>
+<p>
+W3C Specification: <a href="http://www.w3.org/TR/html5">http://www.w3.org/TR/html5</a>
+</p>
+
+<p>
+WHATWG Specification: <a href="https://whatwg.org/html">https://whatwg.org/html</a>
+</p>
+
+<ul>
+<li>Technische und sehr formale Beschreibung von HTML, aber im Zweifel maßgeblich dafür, was "korrekt" ist.</li>
+<li>Schwer zu lesen, aber trotzdem sollte man da ab und zu reinschauen, entweder, um Unklarheiten zu beseitigen oder einfach aus Neugier, wie etwas im Standard beschrieben ist.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-3" data-centered>
+<h2 id="sec-3">HTML Grundlagen</h2>
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-3-1">
+<h3 id="sec-3-1">Übung: HTML Basics</h3>
+
+<div class="figure">
+<p><img src="common/codecademy.png" alt="codecademy.png" class="right-1" />
+</p>
+</div>
+
+<p>
+Bearbeiten Sie das Modul "HTML Basics"
+</p>
+
+<p>
+<a href="https://www.codecademy.com/courses/web-beginner-en-HZA3b">https://www.codecademy.com/courses/web-beginner-en-HZA3b</a>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-3-2">
+<h3 id="sec-3-2">HTML Schnelleinstieg</h3>
+<p>
+HTML (Hypertext Markup Language) ist eine Auszeichnungssprache für das World Wide Web. Sie gibt den Inhalten Struktur und bestimmt, wie die Inhalte im Browser dargestellt werden.
+</p>
+
+<div class="org-src-container">
+
+
+<pre><code class="lang-html">
+&lt;h1&gt;Hello World&lt;/h1&gt; &lt;!-- Heading 1 --&gt;
+
+&lt;p&gt; &lt;!-- Paragraph --&gt;
+   &lt;b&gt;Fetter Text! (bold)&lt;/b&gt;
+&lt;/p&gt;
+&lt;p&gt;
+   &lt;i&gt;Kursiver Text (italics)&lt;/i&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    Ganz normler Text geht natürlich auch!
+    Oder auch ein Bild:
+&lt;/p&gt;
+
+&lt;img src="https://www.hdm-stuttgart.de/stylesheets_bilder/Logo_Graustufen_1.gif"/&gt;
+</code></pre>
+
+</div>
+</section>
+<section>
+
+<p>
+Und so sieht das dann im Browser aus:
+</p>
+
+
+<div class="figure">
+<p><img src="bilder/html-ex1.png" alt="html-ex1.png" style="width:100%" />
+</p>
+</div>
+
+</section>
+<section id="slide-sec-3-2-1">
+<h4 id="sec-3-2-1">Das HTML Grundgerüst</h4>
+<p>
+Das war schon mal der Inhalt, aber eine vollständige, gültige HTML-Seite braucht noch etwas mehr Struktur außenrum:
+</p>
+<div class="org-src-container">
+
+
+<pre><code class="lang-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+      &lt;title&gt;Internetsuchmaschinen 1: Das Seminar&lt;/title&gt;
+      &lt;meta charset="UTF-8" /&gt;
+      &lt;meta name="description" content="Das ultimative Seminar zu Suchmaschinen."/&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      ... Und hier kommt dann der eigentliche Inhalt.
+   &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+</div>
+
+</section>
+<section id="slide-sec-3-2-2">
+<h4 id="sec-3-2-2">HTML/XML Grundlagen</h4>
+<p>
+HTML basiert auf XML (Extensible Markup Language). Inhalte werden durch Tags (<code>&lt;html&gt;</code>, <code>&lt;h1&gt;</code>, &#x2026;) strukturiert.
+</p>
+
+<p>
+Ein Tag besteht &#x2026; 
+</p>
+<ul>
+<li>entweder aus einem öffnenden und schließenden Teil:</li>
+
+</ul>
+<pre class="example">
+&lt;p&gt;Inhalt des Absatzes&lt;/p&gt;
+</pre>
+<ul>
+<li>oder steht für sich allein, was durch einen Slash am Ende gekennzeichnet ist:</li>
+
+</ul>
+<pre class="example">
+&lt;br /&gt; &lt;!-- Ein Zeilenumbruch, break --&gt;
+</pre>
+
+<p>
+Das letzte Beispiel enthält einen <b>Kommentar</b>, der immer zwischen <code>&lt;!--</code> und <code>--&gt;</code> eingschlossen ist.
+</p>
+
+</section>
+<section>
+
+<p>
+Ein Tag kann Attribute und/oder Inhalt enthalten:
+</p>
+
+<ul>
+<li>Ein Bild mit einem alternativen Text:</li>
+
+</ul>
+<pre class="example">
+&lt;img src="logo.gif" alt="Das ist ein Logo" /&gt;
+</pre>
+<ul>
+<li>Ein Bereich (division) mit Breitenangabe und Inhalt:</li>
+
+</ul>
+<pre class="example">
+&lt;div style="width:200px"&gt;Hier steht der Inhalt&lt;/div&gt;
+</pre>
+
+<p>
+Auch Links zu anderen Seiten werden so gebildet. Hier ist ein Link auf die HdM Website:
+</p>
+<div class="org-src-container">
+
+
+<pre><code class="lang-html">
+&lt;a href="http://www.hdm-stuttgart.de"&gt;HdM Stuttgart&lt;/a&gt;
+</code></pre>
+
+</div>
+<p>
+Das könnte dann z.B. so dargestellt werden:
+<a href="http://www.hdm-stuttgart.de">HdM Stuttgart</a>
+</p>
+
+</section>
+<section>
+
+<p>
+Schließlich muss man noch wissen, dass die HTML-Tags in einer <b>baumförmigen Hierarchie</b> angeordnet sind:
+</p>
+
+<div class="org-src-container">
+
+
+<pre><code class="lang-html">
+&lt;html&gt;
+   &lt;head&gt;
+     ...
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;div&gt;
+         &lt;p&gt;
+            &lt;h1&gt;Ich bin ein Ast im Baum!&lt;/h1&gt;
+         &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+         &lt;p&gt;Auch ein Ast.&lt;/p&gt;
+      &lt;/div&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+</div>
+
+<p>
+Damit lassen sich auch <b>Pfade zu allen Knoten</b> angeben, die <code>&lt;h1&gt;</code>-Überschrift also mit:
+</p>
+<pre class="example">
+/html/body/div[1]/p/h1
+</pre>
+
+</section>
+<section>
+<div class="org-src-container">
+
+
+<pre><code class="lang-html">
+&lt;html&gt;
+   &lt;body&gt;
+      &lt;div&gt;
+         &lt;p&gt;
+            &lt;h1&gt;Ich bin ein Ast im Baum!&lt;/h1&gt;
+         &lt;/p&gt;
+      &lt;/div&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+</div>
+
+<pre class="example">
+/html/body/div[1]/p/h1
+</pre>
+
+<p>
+Dieses hierarchische Modell eines Dokuments bezeichnet man als <b>Document Object Model (DOM)</b>, der Baum mit den einzelnen Tags wird entsprechend auch als <b>DOM Tree</b> bezeichnet.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-3-3">
+<h3 id="sec-3-3">Übung: Erste Seite</h3>
+
+<div class="figure">
+<p><img src="common/hand.png" alt="hand.png" style="float:right;width:120px;padding-left:20px;" />
+</p>
+</div>
+
+<p>
+Basteln Sie Ihre eigene Webseite. Im Web finden Sie dazu geeignete Online-Editoren zum einfachen ausprobieren, z.B. <a href="http://codebeautify.org/htmlviewer">http://codebeautify.org/htmlviewer</a>.
+</p>
+
+<p>
+Halten Sie eine HTML-Referenz parat, damit Sie nachschauen können, was ein Tag bedeutet. Recht übersichtlich ist z.B. <a href="http://wiki.selfhtml.org/wiki/HTML">http://wiki.selfhtml.org/wiki/HTML</a>. Dort können Sie bei vielen Tags nicht nur ein Beispiel live <b>ansehen</b>, sondern die Beispiele auch gleich bearbeiten (unter '<b>frickln</b>').
+</p>
+
+</section>
+<section>
+
+<div class="figure">
+<p><img src="common/hand.png" alt="hand.png" style="float:right;width:120px;padding-left:20px;" />
+</p>
+</div>
+
+
+<ol>
+<li>Erstellen Sie einen kleinen Blog-Artikel, der Überschrift, Autoreninformation, Datum der Veröffentlichung, einen Anreißtext und den vollen Artikeltext enthält. Denken Sie an das Gerüst der HTML-Seite. Eine Vorlage zum Kopieren finden Sie z.B. im Selfhtml Wiki unter 'Grundstruktur'.</li>
+<li>Fügen Sie eine Tabelle hinzu.</li>
+<li>Validieren Sie Ihre Webseite, beheben Sie die angezeigten Fehler. <a href="https://html5.validator.nu/">https://html5.validator.nu/</a></li>
+
+</ol>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-3-4">
+<h3 id="sec-3-4">Was fehlt hier noch?</h3>
+<p>
+Das war natürlich erst der Anfang, so geht es weiter:
+</p>
+<ul>
+<li>Die optische Darstellung einer Webseite wird zum großen Teil außerhalb des HTML-Codes definiert, in sogenannten <b>Cascading Stylesheets (CSS)</b>.</li>
+<li>Dynamik auf der Seite (z.B. Benachrichtigungen und Effekte) entwickelt man in <b>JavaScript</b>, einer Programmiersprache, die direkt im Browser ausgeführt wird.</li>
+<li>Einzelne Seiten werden normalerweise nicht von Hand erstellt, sondern entweder mit <b>Content Management Systemen</b> verwaltet oder <b>dynamisch auf dem Server erzeugt</b>, meistens basierend auf einer Datenbank.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-4" data-centered>
+<h2 id="sec-4">Aufbau einer Website</h2>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-4-1">
+<h3 id="sec-4-1">Übung: Build Your Own Webpage</h3>
+
+<div class="figure">
+<p><img src="common/codecademy.png" alt="codecademy.png" style="float:right;width:120px;padding-left:20px;" />
+</p>
+</div>
+
+<p>
+Bearbeiten Sie das Modul "Build Your Own Webpage"
+</p>
+
+<p>
+<a href="https://www.codecademy.com/courses/web-beginner-en-LceTK">https://www.codecademy.com/courses/web-beginner-en-LceTK</a> 
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-4-2">
+<h3 id="sec-4-2">Wiederholung: Bilder und Links</h3>
+<p>
+TODO: Beispiele mit absoluten und relativen Links.
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-4-3">
+<h3 id="sec-4-3">Site oder Seite?</h3>
+<ul>
+<li><b>Website</b> oder <b>Site</b> bezeichnet einen kompletten Webauftritt.</li>
+<li><b>Webseite</b> oder <b>Seite</b> bezeichnet eigentlich eine <i>einzelne</i> HTML-Seite, wie sie im Browser angezeigt wird (engl. <b>(Web) page</b>).</li>
+
+</ul>
+
+<p>
+Im Deutschen wird durch die Ähnlichkeit von Site und Seite leider häufig die Webseite als Synonym für den gesamten Auftritt gebraucht.
+</p>
+
+</section>
+<section id="slide-sec-4-3-1">
+<h4 id="sec-4-3-1">Und Homepage?</h4>
+<ul>
+<li>Die Homepage bezeichnet eigentlich die Startseite eines Webauftritts.</li>
+<li>Wird aber auch oft als Synonym für den gesamten Auftritt verstanden, insbesondere bei privaten Websites.</li>
+<li>Firmenwebsites werden dagegen eher seltener als Homepage bezeichnet.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-4-4">
+<h3 id="sec-4-4">Die statische Website</h3>
+
+<div class="figure">
+<p><img src="bilder/struktur-gesamt.png" alt="struktur-gesamt.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-sec-4-4-1">
+<h4 id="sec-4-4-1">Der Uniform Resource Locator (URL)</h4>
+<p>
+<b>protokoll://server.domain.tld/verzeichnis/datei.endung</b>
+</p>
+
+<p>
+<a href="http://www.example.de/hobbies/malen.html">http://www.example.de/hobbies/malen.html</a>
+</p>
+
+<ul>
+<li>Protokoll: http oder https</li>
+<li>Server: oft www (kann so eingerichtet werden, dass er direkt unter der Domain erreichbar ist, vgl. <a href="http://www.hdm-stuttgart.de">http://www.hdm-stuttgart.de</a> und <a href="http://hdm-stuttgart.de">http://hdm-stuttgart.de</a>)</li>
+<li>Verzeichnis und Datei: entspricht der Anordnung der HTML-Seiten auf dem Server</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-4-4-2">
+<h4 id="sec-4-4-2">Noch mehr zu URLs</h4>
+<p>
+<b>protokoll://server.domain.tld:port/verzeichnis/</b>&crarr;<br  />
+<b>datei.endung?parameter=wert&amp;nocheinparameter=nocheinwert</b>
+</p>
+
+<ul>
+<li>Ein Server muss immer auf einem bestimmten Port angesprochen werden. Der Standard für HTTP ist Port 80, dieser Port kann auch weggelassen werden.</li>
+
+<li>Parameter sind wichtig für dynamisch generierte Seiten:
+
+<ul>
+<li><b>?parameter=wert&amp;nocheinparameter=nocheinwert</b></li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-sec-4-4-3">
+<h4 id="sec-4-4-3">Und zuletzt:</h4>
+<p>
+<b>protokoll://server.domain.tld/verzeichnis/datei.endung#absatz1</b>
+</p>
+
+<p>
+Mit dem Hash-Symbol # wird ein sogenannter Anchor in der Seite angesprungen, das ist ein interner Link auf einen Teilbereich der Seite.
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-4-5">
+<h3 id="sec-4-5">Brainstorm</h3>
+<p>
+Wir erstellen eine Website:
+</p>
+
+<ul>
+<li>Welche Inhalte soll die Seite haben.</li>
+<li>Wie würden Sie die Verzeichnisse strukturieren?</li>
+<li>Wo kommen Bilder hin?</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-4-5-1">
+<h4 id="sec-4-5-1">Ergebnis</h4>
+
+<div class="figure">
+<p><img src="bilder/struktur-brainstorm.jpg" alt="struktur-brainstorm.jpg" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-4-6">
+<h3 id="sec-4-6">Übung: HTML Basics II</h3>
+
+<div class="figure">
+<p><img src="common/codecademy.png" alt="codecademy.png" style="float:right;width:120px;padding-left:20px;" />
+</p>
+</div>
+
+<p>
+Bearbeiten Sie das Modul "HTML Basics II"
+</p>
+
+<p>
+<a href="https://www.codecademy.com/courses/web-beginner-en-y2Yjd">https://www.codecademy.com/courses/web-beginner-en-y2Yjd</a>
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-4-7">
+<h3 id="sec-4-7">Wiederholung: Tags bisher</h3>
+<ul>
+<li><code>html</code>, <code>head</code>, <code>body</code></li>
+<li>head: 
+<ul>
+<li><code>title</code></li>
+
+</ul></li>
+<li>body: 
+<ul>
+<li><code>h1-h6</code>, <code>p</code>, <code>img</code>, <code>a</code> (Struktur, Bilder, Links)</li>
+<li><code>b</code>, <code>strong</code>, <code>i</code>, <code>em</code> (Textauszeichnungen)</li>
+<li><code>ul</code>, <code>ol</code>, <code>li</code> (Listen)</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-sec-4-7-1">
+<h4 id="sec-4-7-1">Wichtige Attribute</h4>
+<ul>
+<li><code>&lt;img src="" alt=""/&gt;</code> beim img-Tag.</li>
+<li><code>&lt;a href=""&gt;&lt;/a&gt;</code> beim a-Tag.</li>
+<li><code>&lt;p style=""&gt;&lt;/p&gt;</code> bei allen Tags zur Formatierung mit CSS.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-4-8">
+<h3 id="sec-4-8">Übung: HTML Basics III</h3>
+
+<div class="figure">
+<p><img src="common/codecademy.png" alt="codecademy.png" style="float:right;width:120px;padding-left:20px;" />
+</p>
+</div>
+
+<p>
+Bearbeiten Sie das Modul "HTML Basics III"
+</p>
+
+<p>
+<a href="https://www.codecademy.com/courses/web-beginner-en-f8mcL">https://www.codecademy.com/courses/web-beginner-en-f8mcL</a>
+</p>
+
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-4-9">
+<h3 id="sec-4-9">Übung: Entwicklerwerkzeuge</h3>
+
+<div class="figure">
+<p><img src="common/hand.png" alt="hand.png" style="float:right;width:120px;padding-left:20px;" />
+</p>
+</div>
+
+<p>
+Machen Sie sich mit den Entwicklerwerkzeugen (s.o.) vertraut.
+</p>
+<ul>
+<li>Öffnen normalerweise mit F12 oder Strg-Umschalt-I,</li>
+<li>Ansehen des Quelltexts,</li>
+<li>Anklicken der Lupe, um die Struktur der Seite zu untersuchen und gezielt in den Quelltext zu springen.</li>
+
+</ul>
+
+</section>
+<section>
+
+<div class="figure">
+<p><img src="common/hand.png" alt="hand.png" style="float:right;width:120px;padding-left:20px;" />
+</p>
+</div>
+
+<p>
+Öffnen Sie beliebige Webseiten. 
+</p>
+
+<ol>
+<li>Sehen Sie die Grundstruktur?</li>
+<li>Finden Sie Tags, die Sie schon kennengelernt haben.</li>
+<li>Sehen Sie weitere Tags, die Sie aus dem Zusammenhang verstehen? Welche, was machen sie?</li>
+<li>Welche Tags werden zur Einteilung der Seite verwendet (Menüs, Inhaltsbereiche, &#x2026;)?</li>
+
+</ol>
+
+
+
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-5">
+<h2 id="sec-5">Praxisprojekt: Eine eigene Website</h2>
+<div class="outline-text-2" id="text-5">
+</div></section>
+</section>
+<section>
+<section id="slide-sec-5-1">
+<h3 id="sec-5-1">Zugang zum Webserver der HdM</h3>
+<ul>
+<li><a href="https://www.hdm-stuttgart.de/intranet/abteilungen/iz-it/dienstleistungen/webseiten">https://www.hdm-stuttgart.de/intranet/abteilungen/iz-it/dienstleistungen/webseiten</a></li>
+<li><a href="https://www.hdm-stuttgart.de/intranet/abteilungen/iz-it/faq-sammlung/dateiserver">https://www.hdm-stuttgart.de/intranet/abteilungen/iz-it/faq-sammlung/dateiserver</a></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-5-2">
+<h3 id="sec-5-2">Einführung in GIT Bash</h3>
+<div class="outline-text-3" id="text-5-2">
+</div></section>
+<section id="slide-sec-5-2-1">
+<h4 id="sec-5-2-1">Installation</h4>
+<ul>
+<li><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+
+</ul>
+
+
+<div class="figure">
+<p><img src="bilder/git-setup-1.png" alt="git-setup-1.png" />
+</p>
+</div>
+
+</section>
+<section>
+
+
+<div class="figure">
+<p><img src="bilder/git-setup-2.png" alt="git-setup-2.png" />
+</p>
+</div>
+
+</section>
+<section>
+
+
+<div class="figure">
+<p><img src="bilder/git-setup-3.png" alt="git-setup-3.png" />
+</p>
+</div>
+
+</section>
+<section>
+
+
+<div class="figure">
+<p><img src="bilder/git-setup-4.png" alt="git-setup-4.png" />
+</p>
+</div>
+
+</section>
+<section>
+
+
+<div class="figure">
+<p><img src="bilder/git-setup-5.png" alt="git-setup-5.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-sec-5-2-2">
+<h4 id="sec-5-2-2">Befehle</h4>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left"><code>pwd</code></td>
+<td class="left">Anzeige des aktuellen Verzeichnisses (Print Working Directory)</td>
+</tr>
+
+<tr>
+<td class="left"><code>cd</code></td>
+<td class="left">Wechsel in das eigene Home-Verzeichnis (change directory)</td>
+</tr>
+
+<tr>
+<td class="left"><code>ls</code></td>
+<td class="left">Den Inhalt des aktuellen Verzeichnisses anzeigen (list)</td>
+</tr>
+
+<tr>
+<td class="left"><code>ls -l</code></td>
+<td class="left">Den Inhalt in Listenform anzeigen</td>
+</tr>
+
+<tr>
+<td class="left"><code>cd VERZEICHNIS</code></td>
+<td class="left">In das angegebene VERZEICHNIS wechseln</td>
+</tr>
+
+<tr>
+<td class="left"><code>cd ..</code></td>
+<td class="left">In das nächsthöhere Verzeichnis wechseln (z.B. von /c/Users nach /c)</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-sec-5-2-3">
+<h4 id="sec-5-2-3">Arbeiten mit SSH und SCP</h4>
+<ul>
+<li>Login auf dem Server der HdM:
+<ul>
+<li><code>ssh ab123@fs1.hdm-stuttgart.de</code></li>
+
+</ul></li>
+<li>Kopieren aller Dateien aus dem aktuellen Verzeichnis in das Verzeichnis www_i auf dem Server:
+<ul>
+<li><code>scp -r * ab123@fs1.hdm-stuttgart.de:www_i</code></li>
+<li><code>*</code> steht für "alle Dateien".</li>
+<li><code>-r</code> steht dabei für recursive, somit werden alle Unterverzeichnisse mit kopiert.</li>
+<li>Nach dem Doppelpunkt steht das Zielverzeichnis auf dem Server, relativ zu Ihrem Homeverzeichnis.</li>
+
+</ul></li>
+
+<li>Vorsicht bei der Verwendung! Sind Sie im richtigen Verzeichnis? Haben Sie den Befehl richtig geschrieben?</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-5-3">
+<h3 id="sec-5-3">WinSCP</h3>
+<p>
+WinSCP ist ein grafischer SCP Client, der für diejenigen, die mit der Kommandozeile noch nicht so vertraut sind, sicherlich leichter zu bedienen ist. 
+</p>
+
+<ul>
+<li>Download: <a href="http://winscp.net">http://winscp.net</a></li>
+
+</ul>
+
+</section>
+<section id="slide-sec-5-3-1">
+<h4 id="sec-5-3-1">Login</h4>
+
+<div class="figure">
+<p><img src="bilder/winscp-login.png" alt="winscp-login.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-sec-5-3-2">
+<h4 id="sec-5-3-2">Nutzung</h4>
+<ul>
+<li>Zweigeteiltes Fenster, links Ihr Computer, rechts der Server</li>
+<li>Sie können mit Drag and Drop arbeiten</li>
+<li>Im Menü finden Sie hilfreiche Funktionen, wie die Möglichkeit, Ordner zu synchronisieren.</li>
+<li>Sie können sogar automatisch synchronisieren lassen, so dass jede lokale Änderung an einer Datei sofort auf den Server kopiert wird.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-6">
+<h2 id="sec-6">CSS</h2>
+<ul>
+<li>Tool: Farb-Selektor <a href="http://www.colorpicker.com/">http://www.colorpicker.com/</a></li>
+<li>CSS Validator: <a href="https://jigsaw.w3.org/css-validator/">https://jigsaw.w3.org/css-validator/</a></li>
+<li>CSS Zen Garden: <a href="http://www.csszengarden.com/">http://www.csszengarden.com/</a></li>
+<li>Cola-Dose: <a href="http://www.romancortes.com/ficheros/css-coke.html">http://www.romancortes.com/ficheros/css-coke.html</a></li>
+
+</ul>
+
+
+
+<div class="org-src-container">
+
+
+<pre><code class="lang-css">
+div {
+   background-color:yellow;
+}
+</code></pre>
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-7" data-centered>
+<h2 id="sec-7">Serverseitige Programmierung</h2>
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-7-1">
+<h3 id="sec-7-1">Installation des Servers</h3>
+<ul>
+<li>XAMPP = Apache + MariaDB (MySQL) + PHP + Perl</li>
+<li>Alternative: <a href="http://www.wampserver.com">http://www.wampserver.com</a></li>
+
+</ul>
+
+</section>
+<section id="slide-sec-7-1-1">
+<h4 id="sec-7-1-1">XAMPP Installieren</h4>
+<ul>
+<li>XAMPP herunterladen: <a href="https://www.apachefriends.org/">https://www.apachefriends.org/</a></li>
+<li>Installation nach c:/xampp</li>
+<li>Essentiell: Apache, MariaDB (MySQL), PHP</li>
+<li>Control Panel</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-7-1-2">
+<h4 id="sec-7-1-2">XAMPP starten</h4>
+<ul>
+<li>Starten Sie das XAMPP Control Panel</li>
+<li>Starten Sie Apache (Ports 80 und 443)</li>
+<li>Nach erfolgreicher Installation sollte im Browser unter <a href="http://localhost">http://localhost</a> die XAMPP Seite zu sehen sein.</li>
+
+</ul>
+
+
+<div class="figure">
+<p><img src="bilder/xampp-control-panel.png" alt="xampp-control-panel.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-sec-7-1-3">
+<h4 id="sec-7-1-3">Troubleshooting</h4>
+<ul>
+<li>Port belegt? Über Netstat kann man nachschauen, was auf Port 80 und 443 läuft.</li>
+<li>Skype könnte schuld sein: <a href="https://support.skype.com/en/faq/FA148/which-ports-need-to-be-open-to-use-skype-for-windows-desktop">Ports freigeben</a>.</li>
+<li>Unter Dienste den WWW Publishingdienst stoppen (mit Administrator-Rechten).</li>
+<li>Wenn schon ein anderer httpd läuft, dann ist das vermutlich XAMPP mit Administrator-Rechten:
+<ul>
+<li>XAMPP Control Center mit Administrator-Rechten starten.</li>
+<li>Apache stoppen, Control Center beenden.</li>
+<li>XAMPP Control Center normal starten, Apache starten.</li>
+
+</ul></li>
+<li>Wenn schon die Installation schief läuft: Wampserver probieren.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-7-2">
+<h3 id="sec-7-2">Laden der eigenen Website</h3>
+<ul>
+<li>Das Verzeichnis "htdocs" im XAMPP-Ordner entspricht "/" auf der Website (auch Document Root genannt)</li>
+<li>Wampserver: Verzeichnis "www" statt "htdocs"</li>
+<li>In diesem Verzeichnis liegt die Seite, die derzeit unter <a href="http://localhost">http://localhost</a> angezeigt wird.</li>
+<li>Kopieren Sie das Verzeichnis, um für alle Fälle ein Backup zu haben.</li>
+<li>Löschen Sie anschließend alles im Verzeichnis.</li>
+<li>Kopieren Sie Ihre statischen HTML-Seiten in das Verzeichnis, so dass Ihre Startseite index.html direkt im Verzeichnis htdocs liegt.</li>
+<li>Jetzt sollte unter <a href="http://localhost">http://localhost</a> Ihre Website zu sehen sein.</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-7-3">
+<h3 id="sec-7-3">Umwandeln der statischen Website nach PHP</h3>
+<ul>
+<li>Bennen Sie alle Ihre .html-Dateien in .php-Dateien um (aus index.html wird index.php).</li>
+<li>Dazu müssen Sie die Dateiendungen auch sehen können, siehe Abschnitt <a href="#sec:windows-ordner">Windows Einstellungen</a>.</li>
+<li>Ändern Sie auch die Links innerhalb Ihrer Seite so, dass sie auf die .php-Dateien verweisen.</li>
+<li>Anschließend sollte ihre Seite noch genau so funktionieren wie vorher.</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-7-4">
+<h3 id="sec-7-4">Anlegen des zentralen Menüs</h3>
+<ul>
+<li>Kopieren Sie ihr Menü aus der Startseite in eine eigene Datei, z.B. nav.php.</li>
+<li>Ändern Sie die Links in nav.php so, dass sie absolut funktionieren, indem Sie einen / an den Anfang setzen. Dadurch ist es egal, ob das Menü auf der Startseite oder einer Unterseite erscheint.</li>
+<li>Ersetzen Sie das Menü in allen Ihren Seiten durch den folgenden Code:
+<div class="org-src-container">
+
+
+<pre><code class="lang-php">
+&lt;?php
+  include("nav.php");
+?&gt;
+</code></pre>
+
+</div></li>
+<li>Auf den Unterseiten muss der Pfad natürlich angepasst werden, so dass Sie auch tatsächlich die nav.php Datei erreichen, also z.B. "../nav.php".</li>
+
+</ul>
+
+
+</section>
+<section id="slide-sec-7-4-1">
+<h4 id="sec-7-4-1">Beispiel</h4>
+<div class="org-src-container">
+<label class="org-src-name">Ein Menü mit absoluten Links</label>
+
+<pre><code class="lang-php">
+&lt;nav&gt;
+   &lt;ul&gt;
+      &lt;li&gt;
+         &lt;a href="/index.php"&gt;Homepage&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+         &lt;a href="/lehre/index.php"&gt;Lehre&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+         &lt;a href="/forschung/index.php"&gt;Forschung&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+         &lt;a href="/hobbies/index.php"&gt;Hobbies&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+         &lt;a href="/links/index.php"&gt;Links&lt;/a&gt;
+      &lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+
+</div>
+
+</section>
+<section id="slide-sec-7-4-2">
+<h4 id="sec-7-4-2">Maximum Include</h4>
+<div class="org-src-container">
+<label class="org-src-name">Eine Inhaltsseite nur für den Inhalt</label>
+
+<pre><code class="lang-php">
+&lt;?php
+   include(../before-content.php);
+?&gt;
+
+&lt;h1&gt;Meine Inhalts-Ueberschrift&lt;/h1&gt;
+&lt;p&gt;Mit spannendem Text&lt;/p&gt;
+
+&lt;?php
+   include(../after-content.php);
+?&gt;
+</code></pre>
+
+</div>
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-7-5">
+<h3 id="sec-7-5">Highlight der aktiven Seite</h3>
+
+<div class="figure">
+<p><img src="bilder/css-menu.png" alt="css-menu.png" style="float:right" />
+</p>
+</div>
+
+<ul>
+<li>Die aktuelle Seite soll hervorgehoben werden.</li>
+<li>Im HTML durch hinzufügen der Klasse "active" zum List Item.</li>
+<li>Normal: <code>&lt;li&gt;...&lt;/li&gt;</code></li>
+<li>Highlight: <code>&lt;li class="active"&gt;...&lt;/li&gt;</code></li>
+
+</ul>
+
+</section>
+<section id="slide-sec-7-5-1">
+<h4 id="sec-7-5-1">Variante 1: Aktives Element klassifizieren</h4>
+<div class="org-src-container">
+<label class="org-src-name">Aktives Menüelement per PHP</label>
+
+<pre><code class="lang-php">
+&lt;nav&gt;
+   &lt;ul&gt;
+      &lt;li &lt;?php echo $_SERVER["REQUEST_URI"]=="/index.php"?"class='active'":"" ?&gt;&gt;
+         &lt;a href="/index.php"&gt;Homepage&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li &lt;?php echo $_SERVER["REQUEST_URI"]=="/lehre/index.php"?"class='active'":"" ?&gt;&gt;
+         &lt;a href="/lehre/index.php"&gt;Lehre&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li &lt;?php echo $_SERVER["REQUEST_URI"]=="/forschung/index.php"?"class='active'":"" ?&gt;&gt;
+         &lt;a href="/forschung/index.php"&gt;Forschung&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li &lt;?php echo $_SERVER["REQUEST_URI"]=="/hobbies/index.php"?"class='active'":"" ?&gt;&gt;
+         &lt;a href="/hobbies/index.php"&gt;Hobbies&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li &lt;?php echo $_SERVER["REQUEST_URI"]=="/links/index.php"?"class='active'":"" ?&gt;&gt;
+         &lt;a href="/links/index.php"&gt;Links&lt;/a&gt;
+      &lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+
+</div>
+
+
+</section>
+<section id="slide-sec-7-5-2">
+<h4 id="sec-7-5-2">Variante 2: Aufbau aus einer Datenstruktur</h4>
+<div class="org-src-container">
+<label class="org-src-name">Menü aus einer Datenstruktur</label>
+
+<pre><code class="lang-php">
+&lt;nav&gt;
+   &lt;ul&gt;
+   &lt;?php
+      $pages = array(
+         array("href" =&gt; "/index.php", "name" =&gt; "Homepage"),
+         array("href" =&gt; "/lehre/index.php", "name" =&gt; "Lehre"),
+         array("href" =&gt; "/forschung/index.php", "name" =&gt; "Forschung"),
+         array("href" =&gt; "/hobbies/index.php", "name" =&gt; "Hobbies"),
+         array("href" =&gt; "/links/index.php", "name" =&gt; "Links"),
+      );
+      foreach($pages as $page) { ?&gt;
+         &lt;li &lt;?php echo $_SERVER["REQUEST_URI"] == $page["href"]?"class='active'":"" ?&gt;&gt;
+            &lt;a href="&lt;?php echo $page["href"]; ?&gt;"&gt;&lt;?php echo $page["name"]; ?&gt;&lt;/a&gt;
+         &lt;/li&gt;
+      &lt;?php } ?&gt;
+   &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-sec:static-generation">
+<h3 id="sec:static-generation"><a id="sec-7-6" name="sec-7-6"></a>Zurück zur statischen Website</h3>
+
+<ul>
+<li>&#x2026; zum Beispiel, um sie doch auf einem USB-Stick weitergeben zu können,</li>
+<li>&#x2026; oder zum Offline-Lesen im Zug,</li>
+<li>&#x2026; oder zum Bereitstellen auf einem Server ohne PHP,</li>
+<li>&#x2026; oder zur Langzeit-Archivierung!</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-7-6-1">
+<h4 id="sec-7-6-1">WGET unter Windows</h4>
+
+<div class="figure">
+<p><img src="bilder/umgebungsvariable.png" alt="umgebungsvariable.png" style="float:right;width:200px;" />
+</p>
+</div>
+
+
+
+<ul>
+<li>Paket für GnuWin32 herunterladen: <a href="http://gnuwin32.sourceforge.net/">http://gnuwin32.sourceforge.net/</a> (<a href="http://gnuwin32.sourceforge.net/packages/wget.htm">direkt</a>)</li>
+<li>Installieren, dabei Zielverzeichnis merken.</li>
+<li>Erweitern der Umgebungsvariable <code>PATH</code>:
+<ul>
+<li>Start -&gt; Suche nach "Umgebungsvariable": Umgebungsvariable für dieses Konto bearbeiten</li>
+<li><code>PATH</code> bearbeiten.</li>
+<li>mit <code>;</code> getrennt das <code>bin</code> Verzeichnis aus GnuWin32 anhängen, z.B. <code>;c:\Programme\GnuWin32\bin</code>.</li>
+
+</ul></li>
+<li>Neustart von Git Bash: Der Befehl <code>wget</code> sollte jetzt vorhanden sein.</li>
+
+</ul>
+
+</section>
+<section id="slide-sec-7-6-2">
+<h4 id="sec-7-6-2">Jetzt aber! Download mit einem Befehl.</h4>
+<ul>
+<li>In Git Bash: 
+<ul>
+<li>In ein Verzeichnis wechseln, in dem die statische Seite gespeichert werden soll (<code>cd</code>, <code>ls</code>, <code>pwd</code>).</li>
+<li><code>wget -mEk localhost</code></li>
+<li>Erklärung:
+<ul>
+<li>-m (Mirror) spiegelt die ganze Seite.</li>
+<li>-E speicher alle HTML-Seiten mit der Endung .html ab.</li>
+<li>-k ändert die Links von absoluten zu relativen Links, damit die Kopie überall funktioniert.</li>
+
+</ul></li>
+<li>Anschließend finden Sie im Ordner localhost Ihre statische Website.</li>
+
+</ul></li>
+
+</ul>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-7-7">
+<h3 id="sec-7-7">Einrichten einer Datenbank</h3>
+<div class="outline-text-3" id="text-7-7">
+</div></section>
+<section id="slide-sec-7-7-1">
+<h4 id="sec-7-7-1">Anlegen der Datenbank in phpMyAdmin</h4>
+<ul>
+<li><a href="http://localhost/phpmyadmin">http://localhost/phpmyadmin</a></li>
+<li>Als Beispiel: hdm-wp-ws2016</li>
+<li>Standard-Zeichnsatz für die Sortierung (Kollation) setzen: "utf8_general_ci"</li>
+
+</ul>
+
+
+<div class="figure">
+<p><img src="bilder/mysql-new-db.png" alt="mysql-new-db.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-sec-7-7-2">
+<h4 id="sec-7-7-2">Datentypen in MySQL</h4>
+<p>
+Die wichtigsten Datentypen sind:
+</p>
+<ul>
+<li>Strings/Text: 
+<ul>
+<li>VARCHAR(LEN): Maximallänge muss festgelegt werden</li>
+<li>TEXT: Flexible Länge, daher im Allgemeinen zu bevorzugen.</li>
+
+</ul></li>
+<li>Ganzzahlen: 
+<ul>
+<li>INT (bis +- 2 Milliarden)</li>
+<li>BIGINT (bis +- 9 Trillionen)</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section>
+<ul>
+<li>Kommazahlen: 
+<ul>
+<li>DOUBLE (Fließkomma, nicht exakt)</li>
+<li>DECIMAL (Festkomma, exakt, z.B. für Geldbeträge)</li>
+
+</ul></li>
+<li>Datum, Uhrzeit: 
+<ul>
+<li>DATETIME: Datum und Uhrzeit (YYYY-MM-DD HH:MM:SS)</li>
+<li>DATE: Nur Datum, (YYYY-MM-DD)</li>
+<li>TIME: Nur Uhrzeit, (HH:MM:SS)</li>
+
+</ul></li>
+
+</ul>
+<p>
+Es gibt noch weitere Datentypen und auch ein paar Unterschiede im Detail, auf die wir hier nicht näher eingehen. Weitere Informationen im Handbuch: <a href="http://dev.mysql.com/doc/refman/5.7/en/data-types.html">http://dev.mysql.com/doc/refman/5.7/en/data-types.html</a>
+</p>
+
+</section>
+<section id="slide-sec-7-7-3" data-smalltable18>
+<h4 id="sec-7-7-3">Passende Wertebereiche wählen</h4>
+<ul>
+<li>z.B. für Ganzzahlen:</li>
+
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left"><b>Type</b></td>
+<td class="right"><b>Storage</b></td>
+<td class="right"><b>Minimum Value</b></td>
+<td class="right"><b>Maximum Value</b></td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="right">(Bytes)</td>
+<td class="right">(Signed/Unsigned)</td>
+<td class="right">(Signed/Unsigned)</td>
+</tr>
+
+<tr>
+<td class="left">TINYINT</td>
+<td class="right">1</td>
+<td class="right">-128</td>
+<td class="right">127</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="right">&#xa0;</td>
+<td class="right">0</td>
+<td class="right">255</td>
+</tr>
+
+<tr>
+<td class="left">SMALLINT</td>
+<td class="right">2</td>
+<td class="right">-32768</td>
+<td class="right">32767</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="right">&#xa0;</td>
+<td class="right">0</td>
+<td class="right">65535</td>
+</tr>
+
+<tr>
+<td class="left">MEDIUMINT</td>
+<td class="right">3</td>
+<td class="right">-8388608</td>
+<td class="right">8388607</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="right">&#xa0;</td>
+<td class="right">0</td>
+<td class="right">16777215</td>
+</tr>
+
+<tr>
+<td class="left">INT</td>
+<td class="right">4</td>
+<td class="right">-2147483648</td>
+<td class="right">2147483647</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="right">&#xa0;</td>
+<td class="right">0</td>
+<td class="right">4294967295</td>
+</tr>
+
+<tr>
+<td class="left">BIGINT</td>
+<td class="right">8</td>
+<td class="right">-9223372036854775808</td>
+<td class="right">9223372036854775807</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="right">&#xa0;</td>
+<td class="right">0</td>
+<td class="right">18446744073709551615</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-sec-7-7-4">
+<h4 id="sec-7-7-4">Konzept machen für die Tabellen, die wir brauchen</h4>
+<p>
+Für jede Tabelle Spalten und Typ festlegen, z.B. für eine Kommentartabelle:
+</p>
+<ul>
+<li>id: INT</li>
+<li>url: TEXT</li>
+<li>verfasser: TEXT</li>
+<li>zeitpunkt: DATETIME</li>
+<li>kommentar: TEXT</li>
+
+</ul>
+
+<p>
+Für kompliziertere Daten komplettes ERM-Diagranmm malen, mit Beziehungen zwischen Tabellen (Fremdschlüsseln). Zur Auffrischung: <a href="http://www.coli.uni-saarland.de/courses/is-is/slides/VLIWIS_DM_DBS.pdf">http://www.coli.uni-saarland.de/courses/is-is/slides/VLIWIS_DM_DBS.pdf</a>
+</p>
+
+</section>
+<section id="slide-sec-7-7-5">
+<h4 id="sec-7-7-5">Anlegen einer Tabelle</h4>
+<ul>
+<li>Eine Tabelle für die Kommentare</li>
+<li>Fünf Spalten laut unserem Konzept</li>
+
+</ul>
+
+<div class="figure">
+<p><img src="bilder/mysql-new-table.png" alt="mysql-new-table.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-sec-7-7-6">
+<h4 id="sec-7-7-6">Definition der Spalten</h4>
+<ul>
+<li>Nicht verwirren lassen, wir brauchen nur:
+<ul>
+<li>Name (aus Konzept)</li>
+<li>Typ (aus Konzept)</li>
+<li>Ggf. Länge (z.B. bei VARCHAR)</li>
+<li>Ggf. Null (darf das Feld leer bleiben?)</li>
+<li>Ggf. A_I (Auto Increment, Wert wird automatisch hochgezählt)</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section>
+<p>
+Wir setzen nur Name und Typ, lediglich bei der id wird A_I (auto increment) aktiviert. phpMyAdmin schlägt daraufhin vor, einen PRIMARY Index anzulegen (zum schnelleren Suchen nach der id), was wir bestätigen.
+</p>
+
+
+<div class="figure">
+<p><img src="bilder/mysql-columns.png" alt="mysql-columns.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-sec-7-8">
+<h3 id="sec-7-8">Abspeichern von Formulardaten</h3>
+<div class="org-src-container">
+
+
+<pre><code class="lang-php">
+// Aufbau der Datenbankverbindung
+$mysql = new mysqli("localhost", "root", "", "hdm-wp-ws2016");
+// $error enthält Fehlerausgaben, falls etwas schief geht.
+$error = "";
+if (isset($_POST['button'])) { // Neuer Kommentar!
+   // Sicheres Belegen der Variablen aus dem Request.
+   $verfasser = trim(isset($_POST['verfasser'])?$_POST['verfasser']:"");
+   $kommentar = trim(isset($_POST['kommentar'])?$_POST['kommentar']:"");
+   // Prüfen, ob alles ausgefüllt wurde.
+   if (empty($verfasser) || empty($kommentar)) {
+      $error = "Bitte alle Felder ausfüllen!";
+   } else {
+      // Das eigentliche SQL Insert Statement als "Prepared Statement"
+      // Die Platzhalter (?) müssen noch mit Werten befüllt werden.
+      $insert = $mysql-&gt;prepare("INSERT INTO kommentare (url,
+                verfasser,kommentar,zeitpunkt) VALUES (?,?,?,now())");
+      // Befüllen der Parameter ("sss" gibt an, dass alle dreu Parameter Strings sind.)
+      $insert-&gt;bind_param("sss", $_SERVER['PHP_SELF'], $verfasser, $kommentar);
+      // Statement an die Datenbank schicken.
+      $insert-&gt;execute();
+      // Ggf. Fehler in die $error-Variable übertragen.
+      if (!empty($insert-&gt;error)) $error = "DB ERROR: ".$insert-&gt;error;
+   }
+}
+</code></pre>
+
+</div>
+
+</section>
+<section>
+
+<div class="org-src-container">
+
+
+<pre><code class="lang-html">
+&lt;div id="comments"&gt;
+   &lt;hr /&gt;
+   &lt;?php
+      // Falls es Fehler gibt, hier ausgeben.
+      if (!empty($error)) {
+                     echo ("&lt;p&gt;".$error."&lt;/p&gt;");
+      }
+   ?&gt;
+   &lt;form method="post" action=""&gt;
+      Ihr Name: &lt;input type="text" name="verfasser" length="20" /&gt;&lt;br/&gt;
+      Kommentar: &lt;textarea name="kommentar" cols="20" rows="10"&gt;&lt;/textarea&gt;&lt;br/&gt;
+      &lt;input type="submit" name="button" value="Kommentar absenden!"/&gt;
+   &lt;/form&gt;
+   &lt;hr /&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-7-9">
+<h3 id="sec-7-9">Ausgabe von Kommentaren</h3>
+<div class="org-src-container">
+
+
+<pre><code class="lang-php">
+// Wieder wird das SQL Select Statement vorbereitet.
+$query = $mysql-&gt;prepare("SELECT verfasser,kommentar,zeitpunkt FROM kommentare WHERE url=?");
+// Als Parameter wird die aktuelle URL der Webseite übergeben.
+$query-&gt;bind_param("s", $_SERVER['PHP_SELF']);
+$query-&gt;execute();
+// Umgekehrt werden die Ergebnisspalten wieder Variablen zugewiesen.
+// Diese können dann bei der Ausgabe benutzt werden, siehe unten.
+$query-&gt;bind_result($verfasser, $kommentar, $zeitpunkt);
+// Falls es Fehler gibt, werden sie in $error vermerkt. Achtung, da da jetzt schon was
+// drin stehen kann, hängen wir uns hinten dran.
+if (!empty($query-&gt;error)) $error = "Insert Error: ".$error." / Query Error: ".$query-&gt;error;
+
+// Die Ausgabe kann natürlich später an der passenden Stelle im HTML-Code eingebaut werden.
+// Die WHILE-Schleife durchläuft alle Kommentare, die aus der Datenbank kommen.
+// Auf die Werte der Spalten kann über die oben gebundenen Variablen zugegriffen werden.
+while($query-&gt;fetch()) {
+   echo "&lt;hr/&gt;";
+   echo $verfasser."&lt;br/&gt;";
+   echo $kommentar."&lt;br/&gt;";
+   echo $zeitpunkt."&lt;br/&gt;";
+}
+</code></pre>
+
+</div>
+
+</section>
+</section>
+   
+   <section>
+      <section id="slide-sec-GitHub" data-centered>
+         <h2 id="sec-8">GitHub</h2>
+      </section>
+   </section>
+   <section>
+      <section id="slide-sec-GitHub-1">
+         <h3 id="sec-8-1">Allgemeines</h3>
+         <ul>
+            <li>Online-Plattform, um die kollaborative Entwicklung von Softwareprojekten zu organisieren und durchzuführen</li>
+            <li>Basiert auf git (freie Software zur verteilten Versionsverwaltung)</li>
+            <li>Unabhängig von Programmiersprachen und Entwicklungsumgebungen</li>
+            <li>Software, Programmcode, etc. wird in einem "Repository" abgelegt</li>
+            <li>Projektorganisation durch Issue Tracking</li>
+            <li>Umfangreiche Dokumentationsmöglichkeiten, z.B. Wiki</li>
+            <li>Versionskontrolle</li>
+            <li>Übernahme und Weiterentwicklung von bestehenden Projekten</li>
+         </ul>
+      </section>
+      
+      <section id="slide-sec-GitHub-1-1">
+         <h4 id="sec-8-1-2">Account anlegen und konigurieren</h4>
+         <ul>
+            <li><a href="https://github.com/">https://github.com/</a></li>
+         </ul>
+      </section>
+      <section id="slide-sec-GitHub-1-2">
+         <h4 id="sec-8-1-1">GitHub Desktop</h4>
+         <ul>
+            <li>Software, um vom Desktop aus kollaborativ zu arbeiten</li>
+            <li>Software übernimmt die Kommunikation mit GitHub, z.B. Hinzufügen von neuem Programmcode</li>
+            <li><a href="https://desktop.github.com/">https://desktop.github.com/</a></li>
+            <li>Unter "Options" mit GitHub-Account einloggen</li>
+                    
+         </ul>
+         
+         
+      </section>
+      <section id="slide-sec-GitHub-1-3">
+         <h4 id="sec-8-1-2">Projekte hinzufügen</h4>
+         <p>Es gibt mehrere Möglichkeiten, Projekte zu starten oder hinzuzufügen:</p>
+         <ul>
+            <li>Es können neue Projekte in einem Repository angelegt werden, bestehende Projekte in ein existierendes Repository importiert werden oder ein bestehendes Projekt geklont werden</li>
+            <li>GitHub: "New repository" oder "Import repository" auswählen, Projekt konfigurieren, danach unter "Code" auf "Set up in Desktop" klicken</li>
+            <li>GitHub Desktop: "Add", "Create" oder "Clone" auswählen, Projekt konfigurieren, danach auf "Publish" klicken</li>
+            
+         </ul>
+      </section>
+      <section id="slide-sec-GitHub-1-4">
+         <h4 id="sec-8-1-3">Kollaborativ Entwickeln</h4>
+         <ul>
+            <li>Committen: Hinzufügen von Änderungen am Programmcode</li>
+            <li>Branch: Eigene "Kopie" des Projekts, um neuen Programmcode zu entwickeln und zu testen</li>
+            <li>Pull Request: Mitteilung an den Projektverantwortlichen, um einen Branch dem "Master" des Projekts hinzuzufügen</li>
+         <li>Fork: Entwicklungszweig eines aufgespaltenen Projekts, dessen Code in dem Fork weiter genutzt bzw. entwickelt wird</li>
+         </ul>
+      </section>
+   </section>
+<section>
+<section id="slide-sec-8" data-centered>
+<h2 id="sec-8">Content Management Systeme</h2>
+
+
+</section>
+</section>
+<section>
+<section id="slide-sec-8-1">
+<h3 id="sec-8-1">Allgemeines</h3>
+<ul>
+<li>Einteilung in Frontend (= "die Website") und Backend (Administrationsbereich)</li>
+<li>Benutzerverwaltung</li>
+<li>Inhalte werden in einer Datenbank gespeichert</li>
+<li>Trennung von Inhalt und Layout (Themes)</li>
+<li>Verfügbarkeit vieler Standard-Workflows</li>
+
+</ul>
+</section>
+<section id="slide-sec-8-1-1">
+<h4 id="sec-8-1-1">Frontend</h4>
+<ul>
+<li>Darstellung der Inhalte als "fertige" HTML-Seiten</li>
+<li>Anpassung des Layouts normalerweise in Form von Themes oder Templates:</li>
+   <ul>
+   <li>In leeren HTML-Seiten stehen Platzhalter, die beim Abruf der Seite mit Inhalten gefüllt werden.</li>
+   </ul>
+
+</ul>
+
+
+</section>
+<section id="slide-sec-8-1-2">
+<h4 id="sec-8-1-2">Backend</h4>
+   <ul>
+      <li>Administrationsbereich der Website</li>
+      <li>Anlegen, Bearbeiten und Verwaltung der Seiten und der Inhalte</li>
+      <li>Zentrale Verwaltung von zusätzlichen Ressourcen, z.B. Bilder, Videos, Dokumente, etc.</li>
+   </ul>
+</section>
+<section id="slide-sec-8-1-3">
+<h4 id="sec-8-1-3">Benutzerverwaltung</h4>
+   <ul>
+      <li>Anlegen, Bearbeiten und Verwaltung von Benutzern</li>
+      <ul><li>verschiedene Rollen von Benutzern, z.B. Administrator, Redakteur, etc.</li>
+      <li>Besucher der Website</li>
+      </ul>
+      <li>Zuweisen und Verwalten von Rollen und Rechten</li>
+   </ul>
+</section>
+   <!--
+<section id="slide-sec-8-1-4">
+<h4 id="sec-8-1-4">Workflows</h4>
+   <ul>
+      <li>Datenbanken werden vom System verwaltet</li>
+      <li>...</li>
+   </ul>
+</section> -->
+</section>
+<section>
+<section id="slide-sec-8-2">
+<h3 id="sec-8-2">Wordpress</h3>
+<div class="outline-text-3" id="text-8-2">
+   <ul>
+      <li>Web-Software, um z.B. moderne Internetpräsenzen, Websites, Blogs und Online-Shops umzusetzen</li>
+      <li>Sehr lebendige Entwickler-Community, viele Plugins und Themes</li>
+      <li>Unmittelbare Vorschau der Seite für Computer, Tablets und Smartphones</li>
+   </ul>
+</div></section>
+<section id="slide-sec-8-2-1">
+<h4 id="sec-8-2-1">Installation</h4>
+   <ul>
+      <li><a href="https://de.wordpress.org/">https://de.wordpress.org/</a></li>
+      <li>Herunterladen, Entpacken und den Ordner /wordpress unter den Ordner /htdocs kopieren</li>
+      <li>Apache und MySQL starten</li>
+      <li>Aufrufen von Wordpress unter <a href="http://localhost/wordpress">http://localhost/wordpress</a></li>
+      <li>Während der Installation: Datenbank anlegen unter <a href="http://localhost/phpmyadmin">http://localhost/phpmyadmin</a></li>
+      <ul>
+         <li>Beachten: Als Kollation "utf-8 general ci" wählen</li>
+         <li>Datenbankname, Benutzer und Passwort merken</li>
+      </ul>
+      <li>Installation abschließen und Anlegen der einzelnen Seiten über das Webfrontend</li>
+   </ul>
+</section>
+</section>
+<section>
+<section id="slide-sec-8-3">
+<h3 id="sec-8-3">DokuWiki</h3>
+<div class="outline-text-3" id="text-8-3">
+   <ul>
+      <li>Wiki-Software zum Erstellen von Dokumentationen u.ä. Inhalten</li>
+      <li>Sehr lebendige Entwickler-Community, viele Plugins und Themes</li>
+   </ul>
+</div></section>
+<section id="slide-sec-8-3-1">
+<h4 id="sec-8-3-1">Installation</h4>
+   <ul>
+      <li><a href="https://www.dokuwiki.org/de:dokuwiki">https://www.dokuwiki.org/de:dokuwiki</a></li>
+      <li>Herunterladen, Entpacken und den Ordner /dokuwiki unter den Ordner /htdocs kopieren</li>
+      <li>Apache und MySQL starten</li>
+      <li>Aufrufen des Wikis unter <a href="http://localhost/dokuwiki">http://localhost/dokuwiki</a></li>
+      <li>Anlegen einer Seite durch Aufruf der gewünschten URL im Browser, danach "Create this Page" anklicken</li>
+   </ul>
+</section>
+</section>
+   
+   <section>
+      <section id="slide-sec-8-4">
+         <h3 id="sec-8-4">OJS</h3>
+         <div class="outline-text-3" id="text-8-3">
+            <ul>
+               <li>Open Journal Systems</li>
+               <li>Web-Software, um Journals zu verwalten und zu veröffentlichen</li>
+               <li>Sehr komplexe und umfangreiche Workflows, um wissenschaftlichen Begutachtungsprozess zu ermöglichen</li>
+            </ul>
+         </div></section>
+      <section id="slide-sec-8-4-1">
+         <h4 id="sec-8-4-1">Installation</h4>
+         <ul>
+
+            <li><a href="https://pkp.sfu.ca/ojs/">https://pkp.sfu.ca/ojs/</a></li>
+            <li>Herunterladen, Entpacken und den Ordner /ojs unter den Ordner /htdocs kopieren</li>
+            <li>Apache und MySQL starten</li>
+            <li>Aufrufen unter <a href="http://localhost/ojs">http://localhost/ojs</a>, Anlegen der Datenbank</li>
+         </ul>
+      </section>
+   </section>
+   
+<section>
+<section id="slide-sec-9">
+<h2 id="sec-9">JavaScript</h2>
+</section>
+</section>
+<section>
+<section id="slide-sec-10" data-smallprint>
+<h2 id="sec-10">Referenzen und Lizenz</h2>
+
+<p>
+Dieses Script von Prof. Dr. Kai Eckert unterliegt der <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+</p>
+   <p>
+Dieses Skript wurde ergänzt von Dr. Benjamin Zapilko.
+</p>
+
+
+<div class="figure">
+<p><img src="common/cc-by-nc-sa.png" alt="cc-by-nc-sa.png" />
+</p>
+</div>
+</section>
+</section>
+</div>
+</div>
+<div id="footer">Dr. Benjamin Zapilko | Webpublishing | WS 2016/2017</div>
+
+<script src="common/reveal.js-3.0.0/lib/js/head.min.js"></script>
+<script src="common/reveal.js-3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: false,
+progress: false,
+history: true,
+center: false,
+slideNumber: true,
+rollingLinks: true,
+keyboard: true,
+overview: true,
+width: 1024,
+height: 768,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'slide', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: 'common/hdm-scripts.js', async: true, callback: function() { } },
+ { src: 'common/reveal.js-3.0.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+ { src: 'common/reveal.js-3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'common/reveal.js-3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'common/reveal.js-3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+]
+});
+</script>
+</body>
+</html>

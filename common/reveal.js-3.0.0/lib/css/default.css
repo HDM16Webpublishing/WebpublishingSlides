@@ -1,0 +1,66 @@
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+
+.reveal pre .hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #fff;
+  font-weight: bold;
+}
+
+.reveal pre .hljs,
+.reveal pre .hljs-subst,
+.reveal pre .hljs-tag .reveal pre .hljs-title {
+  color: black;
+}
+
+.reveal pre .hljs-string,
+.reveal pre .hljs-title,
+.reveal pre .hljs-section,
+.reveal pre .hljs-attribute,
+.reveal pre .hljs-selector-id,
+.reveal pre .hljs-selector-class,
+.reveal pre .hljs-variable,
+.reveal pre .hljs-template-variable,
+.reveal pre .hljs-symbol,
+.reveal pre .hljs-deletion {
+  color: #800;
+}
+
+.reveal pre .hljs-comment,
+.reveal pre .hljs-quote {
+  color: #888;
+}
+
+.reveal pre .hljs-number,
+.reveal pre .hljs-regexp,
+.reveal pre .hljs-literal,
+.reveal pre .hljs-addition,
+.reveal pre .hljs-bullet,
+.reveal pre .hljs-link {
+  color: #080;
+}
+
+.reveal pre .hljs-meta {
+  color: #88f;
+}
+
+.reveal pre .hljs-keyword,
+.reveal pre .hljs-selector-tag,
+.reveal pre .hljs-title,
+.reveal pre .hljs-name,
+.reveal pre .hljs-section,
+.reveal pre .hljs-built_in,
+.reveal pre .hljs-doctag,
+.reveal pre .hljs-type,
+.reveal pre .hljs-strong {
+  font-weight: bold;
+}
+
+.reveal pre .hljs-emphasis {
+  font-style: italic;
+}
